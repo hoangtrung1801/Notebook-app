@@ -390,6 +390,11 @@ body, html, main, .row {
 .sidebar-logo {
   text-align: center;
 }
+.sidebar-logo a {
+  font-size: inherit;
+  color: white;
+  text-decoration: none;
+}
 
 .sidebar-list-note {
   flex-grow: 1;
@@ -412,6 +417,7 @@ body, html, main, .row {
   padding: 1rem;
   color: white;
   text-decoration: none;
+  border-top: 1px solid #dfe6e963;
 
   display: flex;
   align-items: center;
@@ -433,6 +439,8 @@ body, html, main, .row {
 
 .note-title {
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .note-content {

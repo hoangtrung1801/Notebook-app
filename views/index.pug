@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Note
+  // Bootstrap
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC', crossorigin='anonymous')
+  // css
+  link(rel='stylesheet', href='css/style.css')
+main.container-fluid
+  .row
+    .col-3
+      .sidebar
+        h2.sidebar-logo 
+          a(href='/') Note
+        ul.list-group.list-group-flush.sidebar-list-note
+          if data
+            each item in data 
+              a.list-group-item(href='/'+item.id)= item.title
+          //- a.list-group-item(href='#') To do
+          //- a.list-group-item(href='#') Work
+          //- a.list-group-item(href='#') Idea
+          //- a.list-group-item(href='#') Tricks
+        .sidebar-new-page
+          svg.bi.bi-plus-square(xmlns='http://www.w3.org/2000/svg', width='20', height='20', fill='currentColor', viewbox='0 0 16 16')
+            path(d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z')
+            path(d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+          span New page
+    .col-9
+      .note
+
+script(src="js/script.js") 
