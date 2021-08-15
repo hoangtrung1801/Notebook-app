@@ -45,7 +45,7 @@ app.post('/', (req, res) => {
   ]
   res.cookie('data', JSON.stringify(data));
 
-  res.redirect('/'+id);
+  res.redirect('/note/'+id);
 })
 
 app.get('/note/:id', (req, res) => {
@@ -66,5 +66,5 @@ app.post('/note/:id', (req, res) => {
     .title = req.body.title;
   res.cookie('data', JSON.stringify(data));
 
-  res.redirect('/'+req.params.id);
+  res.redirect('/note/'+req.params.id);
 })

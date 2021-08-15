@@ -1,6 +1,9 @@
+let change = false;
+
 const title = document.querySelector('.note-title span');
 const titleBtn = document.querySelector('#change-title'); 
 const saveBtn = document.querySelector('#note-save');
+const content = document.querySelector('.note-content textarea');
 
 titleBtn.addEventListener('click', () => {
   title.contentEditable = "true";
@@ -18,6 +21,15 @@ titleBtn.addEventListener('click', () => {
 })
 
 saveBtn.addEventListener('click', () => {
+  change = false;
   document.querySelector('.note-title input').value = document.querySelector('.note-title span').textContent;
   console.log(document.querySelector('.note-title input').value);
+})
+
+content.addEventListener('change', () => {
+  change = true;
+})
+
+window.addEventListener('beforeunload', (e) => {
+  if(change) e.returnValue = "SAve ? ";
 })
