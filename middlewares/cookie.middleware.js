@@ -9,7 +9,6 @@ module.exports = (req, res, next) => {
     ]
     res.cookie('data', JSON.stringify(res.locals.data));
   }
-  
 
   next();
 } 

@@ -437,10 +437,21 @@ body, html, main, .row {
   flex-direction: column;
 }
 
-.note-title {
+.note-header {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.note-title span:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+#change-title {
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 .note-content {

@@ -1,9 +1,6 @@
 const express = require('express');
 const app = express();
 
-const http = require('http');
-const server = http.createServer(app);
-
 const cookieParser = require('cookie-parser');
 const _ = require('lodash');
 const shortid = require('shortid');
@@ -28,7 +25,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.use(cookieParser());
 app.use(cookieMiddleware);
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log('Open port ' + port);
 })
 
@@ -51,18 +48,22 @@ app.post('/', (req, res) => {
   res.redirect('/'+id);
 })
 
-app.get('/:id', (req, res) => {
+app.get('/note/:id', (req, res) => {
   let item = _.find(res.locals.data, {id: req.params.id});
+  if(!item) res.redirect('/');
   res.render('page', {
     curItem: item
   })
 })
 
-app.post('/save/:id', (req, res) => {
+// Save note
+app.post('/note/:id', (req, res) => {
   // set lai cookie
   let data = res.locals.data;
   _.find(data, {id: req.params.id})
     .content = req.body.content;
+  _.find(data, {id: req.params.id})
+    .title = req.body.title;
   res.cookie('data', JSON.stringify(data));
 
   res.redirect('/'+req.params.id);

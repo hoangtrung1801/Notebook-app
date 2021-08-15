@@ -29,3 +29,8 @@ const newPage = document.querySelector('.sidebar-new-page')
 newPage.addEventListener('click', () => {
   postForm({}, '', '/', 'post');
 })
+
+
+window.onbeforeprint = (e) => {
+  confirm('save ? ');
+}
