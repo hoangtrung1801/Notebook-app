@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Encode Sans", sans-serif;
+}
+
+.App {
+  color: #212529;
+  display: grid;
+  grid-template-columns: auto auto;
+}
