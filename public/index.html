@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="w-full h-screen flex">
+    <div class="w-60 h-screen bg-gray-100 px-4">
+      <div class="w-full h-10 flex items-center mb-4">
+        <span class="text-xl font-bold text-gray-700">Trung's note</span>
+      </div>
+
+      <div class="w-full text-gray-500 space-y-2">
+        <div class="flex items-center hover:bg-gray-200 cursor-pointer">
+          <span class="text-xl pl-4 border-l-4 border-gray-500">Page 1</span>
+        </div>
+        <div class="flex items-center hover:bg-gray-200 cursor-pointer">
+          <span class="text-xl pl-4">Page 2</span>
+        </div>
+        <div class="flex items-center hover:bg-gray-200 cursor-pointer">
+          <span class="text-xl pl-4">Page 3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-1 h-screen px-40 py-4 text-gray-900">
+      <div class="h-full w-full">
+        <!-- Title note -->
+        <div class="h-20 flex items-center justify-between">
+          <div class="flex space-x-4 items-center">
+            <span class="text-4xl font-semibold">Page 1</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+
+          <div class="flex space-x-1 cursor-pointer rounded-xl px-2 hover:bg-gray-200 transition duration-300">
+            <span>Save</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Content note -->
+        <div class="mt-8 h-full">
+          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium ut architecto reiciendis, quas
+          nobis esse sint tenetur necessitatibus quo. Consequatur voluptatibus cum voluptas ad itaque corrupti, ab
+          reiciendis dolore. -->
+          <textarea name="content" id="content" placeholder="Type something ..." class="w-full h-full p-4 outline-none" autofocus spellcheck="false">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis cum deleniti aliquid repellat, maiores tempora cumque perspiciatis ea adipisci in dolore omnis magni. Deleniti sunt et laudantium sed vel necessitatibus.</textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
