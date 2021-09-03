@@ -2,14 +2,16 @@
   "name": "note-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
+    "start": "electron .",
     "build-css": "tailwindcss build src/style.css  public/style.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.3.3",
+    "electron": "^14.0.0",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9"
   }
