@@ -13,16 +13,20 @@
 
 <body>
   <main class="w-full h-screen flex">
-    <div class="w-60 h-screen bg-gray-100 px-4">
+    <div class="w-60 h-screen bg-gray-100 px-4 flex flex-col">
       <div class="w-full h-10 flex items-center mb-4">
         <span class="text-xl font-bold text-gray-700">Trung's note</span>
       </div>
 
-      <div id="page-nav" class="w-full text-gray-500 space-y-2">
+      <div id="page-nav" class="w-full text-gray-500 space-y-2 flex-1">
         <!-- <div class="relative items-center hover:bg-gray-200 cursor-pointer page" id='0'>
           <span class="text-xl pl-4">Page 1</span>
           <div class="absolute top-0 left-0 w-full h-full opacity-0 z-10"></div>
         </div> -->
+      </div>
+
+      <div class="w-full text-gray-500 py-4 cursor-pointer hover:bg-gray-200" id="new-page">
+        <span>+ New page</span>
       </div>
     </div>
 
@@ -32,11 +36,13 @@
         <div class="h-20 flex items-center justify-between">
           <div class="flex space-x-4 items-center">
             <span class="text-4xl font-semibold" id="title"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
+            <span class="cursor-pointer" id="change-title">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+            </span>
           </div>
 
           <div id="save-btn"
